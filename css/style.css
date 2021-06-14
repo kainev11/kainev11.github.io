@@ -8,6 +8,31 @@
 
 body {
     background-color: #010202;
+    max-width: 100vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+:not(body, html)::-webkit-scrollbar { 
+    width: 3px; 
+    height: 3px;
+}
+:not(body, html)::-webkit-scrollbar-thumb { 
+    width: 3px;
+    border-radius: 3px;
+    background-color: #006cff;
+}
+
+:not(body, html)::-webkit-scrollbar-track {
+    background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    #1d2235 50%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0) 100%);
 }
 
 .preloader__wrapper {
@@ -238,7 +263,12 @@ body {
     background: linear-gradient(to bottom, #0f1419, #07090b 20%);
     border-radius: 10px;
     margin-right: 15px;
-    padding: 15px;
+    padding: 15px 10px 15px;
+}
+
+.sidebar h1 {
+    font-weight: normal;
+    padding-left: 10px;
 }
 
 hr {
@@ -248,21 +278,35 @@ hr {
     background: #192129;
 }
 
+.sidebar__info,
 .sidebar__news {
+    height: 162px;
+    margin: 10px 0;
+    overflow-y: scroll;
+}
+
+.sidebar__news {
+    height: 324px;
+}
+
+.sidebar__news_item,
+.sidebar__info_item {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 10px;
     border: 1px solid transparent;
+    margin-right: 10px;
 }
 
-.sidebar__news:hover {
+.sidebar__news_item:hover,
+.sidebar__info_item:hover {
     background: linear-gradient(to right, #1d2227, #0a0a0b);
     border: 1px solid #2a2a2a;
     border-radius: 10px;
 }
 
-.sidebar__news img {
+.sidebar__news_item img {
     max-width: 32px;
     max-height: 32px;
     border-radius: 5px;
@@ -270,6 +314,7 @@ hr {
 
 .sidebar__news_info {
     padding-left: 10px;
+    white-space: nowrap;
 }
 
 .sidebar__news_info p {
@@ -305,14 +350,20 @@ h3 {
     padding: 15px 20px;
 }
 
+.content__results,
 .content__best,
 .content__partners,
 .content__record {
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
+.content__partners {
+    padding-bottom: 15px;
+}
+
+.content__results_wrapper,
 .content__best_wrapper,
 .content__best_columns,
 .content__best_players-data,
@@ -325,15 +376,89 @@ h3 {
     justify-content: space-between;
 }
 
+.content__results_match-wrapper,
 .content__best_players,
 .content__best_teams {
     display: flex;
     flex-direction: column;
-    max-width: calc(50% - 20px);
+    width: 100%;
     padding: 5px 10px;
+    margin-right: 20px;
     border: 1px solid #14161f;
     border-radius: 10px;
     background: linear-gradient(-45deg, #07090b 75%, #0d223b);
+}
+
+.content__results_match-wrapper:last-child,
+.content__best_players:last-child,
+.content__best_teams:last-child {
+    margin-right: 0;
+}
+
+.content__results_match,
+.content__results_footer {
+    display: flex;
+    padding: 0 6px;
+    justify-content: space-between;
+}
+
+.content__results_match {
+    margin-bottom: 10px;
+}
+
+.content__results_teams {
+    height: 115px;
+    overflow-y: scroll;
+    margin-right: 6px;
+}
+
+.content__results_team {
+    display: flex;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    margin: 5px 0;
+    margin-right: 10px;
+}
+
+.content__results_team-info {
+    display: flex;
+    flex-basis: 35%;
+}
+
+.content__results_team-position {
+    width: 10px;
+}
+
+.content__results_team-name {
+    margin-left: 12px;
+}
+
+.content__results_team-statistics {
+    display: flex;
+    flex-basis: 65%;
+}
+
+.content__results_footer{
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.content__results_team-statistics span {
+    font-size: 10pt;
+    color: #8489a0;
+    width: calc(100% / 3);
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.content__results_footer-button {
+    padding: 5px 7px;
+    background: linear-gradient(40deg, #29468d, #0149b6);
+    border: 1px solid #0099fa;
+    border-radius: 5px;
 }
 
 .content__best_players h3,
@@ -352,6 +477,7 @@ h3 {
     border: 1px solid transparent;
 }
 
+.content__results_team:hover,
 .content__best_players-data:hover {
     background: linear-gradient(to left, #0a0a0b, #2a4791);
     border-radius: 9px;
@@ -403,13 +529,31 @@ h3 {
 }
 
 .content__record_pics a {    
-    max-height: 170px;
-    max-width: calc(25% - 20px);
+    display: flex;
+    position: relative;
+    margin-right: 10px;
+}
+
+.content__record_pics a:last-child {
+    margin-right: 0;
+}
+
+.content__record_pics a img {
+    width: 100%;
+}
+
+.content__partners_pics a {
+    display: flex;
+    margin-right: 20px;
+}
+
+.content__partners_pics a:last-child {
+    margin-right: 0;
 }
 
 .content__partners_pics img {    
     max-height: 265px;
-    max-width: calc(50% - 20px);
+    width: 100%;
     border: 1px solid #14161f;
 }
 
@@ -428,7 +572,7 @@ h3 {
     background-color: #07090b;
     border: 1px solid #14161f;
     border-radius: 10px;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .footer p {
