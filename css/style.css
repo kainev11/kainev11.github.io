@@ -77,11 +77,17 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: 126px;
     height: 42px;
     background-color: #07090b;
     border-radius: 10px;
     margin-right: 10px;
+}
+
+.header__nav_profile div {
+    display: flex;
+    flex-direction: column;
 }
 
 .header__nav_profile img {
@@ -91,29 +97,28 @@ a {
 }
 
 .header__nav_profile-nickname {
-    font-size: small;
+    font-size: 14px;
     color: white;
-    margin-left: 6px;
 }
 
 .header__nav_profile-premium {
-    font-size: 9pt;
+    font-size: 10px;
     color: #ffc809;
 }
 
 .header__nav_profile-button {
     width: 0;
     height: 0;
-    margin: 5px 8px 0 0;
-    border: 5px solid transparent;
-    border-top: 7px solid #b8b8b8;
+    margin: 3px 6px 0 0;
+    border: 3px solid transparent;
+    border-top: 5px solid #b8b8b8;
     background-color: transparent;
 }
 
 .header__nav_profile-button:hover {
-    margin: 0 8px 5px 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid #b8b8b8;
+    margin: 0 6px 6px 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid #b8b8b8;
 }
 
 .header__nav_menu {
@@ -220,7 +225,7 @@ a {
 
 .header__nav_menu-signin:hover {
     background: linear-gradient(40deg, rgba(11, 186, 251), rgba(66, 133, 236));
-    box-shadow: 0 0 27px 3px #0083fd;
+    box-shadow: 0 0 27px 3px rgba(0, 131, 253, 0.5);
 }
 
 .header__social {
@@ -250,7 +255,7 @@ a {
 .main {
     display: grid;
     grid-area: main;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 3fr 16fr;
     grid-template-areas: "sidebar content";
     margin: 10px 0;
 }
@@ -262,7 +267,7 @@ a {
     top: 30px;
     background: linear-gradient(to bottom, #0f1419, #07090b 20%);
     border-radius: 10px;
-    margin-right: 15px;
+    margin-right: 20px;
     padding: 15px 10px 15px;
 }
 
@@ -313,13 +318,25 @@ hr {
 }
 
 .sidebar__news_info {
+    display: flex;
+    flex-direction: column;
     padding-left: 10px;
     white-space: nowrap;
 }
 
-.sidebar__news_info p {
-    font-size: 8pt;
+.sidebar__news_info-event {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.sidebar__news_info div {
+    font-size: 12px;
     color: #8489a0;
+}
+
+.sidebar__news_info-teamname {
+    font-size: 12px;
+    color: #006cff;
 }
 
 .sidebar__advice {
@@ -327,12 +344,13 @@ hr {
     flex-direction: column;
     background: linear-gradient(to right, #24272f, #121320);
     padding: 10px;
+    margin-bottom: 30px;
     border: 1px solid #192129;
     border-radius: 10px;
 }
 
 h3 {
-    font-size: 12pt;
+    font-size: 18px;
 }
 
 .sidebar__advice p {
@@ -346,10 +364,11 @@ h3 {
     grid-area: content;
     background-color: #07090b;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-left: 20px;
     padding: 15px 20px;
 }
 
+.content__events,
 .content__results,
 .content__best,
 .content__partners,
@@ -363,6 +382,7 @@ h3 {
     padding-bottom: 15px;
 }
 
+.content__events_wrapper,
 .content__results_wrapper,
 .content__best_wrapper,
 .content__best_columns,
@@ -376,6 +396,7 @@ h3 {
     justify-content: space-between;
 }
 
+.content__events_item,
 .content__results_match-wrapper,
 .content__best_players,
 .content__best_teams {
@@ -386,7 +407,191 @@ h3 {
     margin-right: 20px;
     border: 1px solid #14161f;
     border-radius: 10px;
-    background: linear-gradient(-45deg, #07090b 75%, #0d223b);
+    background: radial-gradient(circle farthest-corner at top left, #0d223b, #07090b 25%);
+}
+
+.content__results_match-wrapper {
+    background: radial-gradient(circle farthest-corner at top left, #0d223b, #07090b 35%);
+}
+
+.content__events_item {
+    padding: 0;
+    background: radial-gradient(circle farthest-corner at bottom right, #0d223b, #07090b 25%);
+}
+
+.content__events_item-desc {
+    padding: 0 20px 10px 20px;
+}
+
+.content__events_item:last-child {
+    margin-right: 0;
+}
+
+.content__events_item-cover {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.content__events_item-header,
+.content__events_item-names,
+.content__events_item-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.content__events_item-header {
+    margin-top: -30px;
+}
+
+.content__events_item-tags span {
+    font-size: 14px;
+    background-color: rgba(28, 28, 28, 0.65);
+    border: 1px solid #1f1f1f;
+    border-radius: 4px;
+    text-align: center;
+    padding: 1px 5px 3px;
+}
+
+.content__events_item-platforms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content__events_item-platforms div {
+    position: relative;
+    background-color: rgba(35, 54, 141, 0.5);
+    border: 1px solid rgba(15, 50, 140, 0.8);
+    border-radius: 3.5px;
+    height: 20px;
+    font-size: 12px;
+    padding: 3px;
+    margin-left: 3px;
+}
+
+.content__events_item-platforms div img {
+    height: 12px;
+}
+
+.content__events_item-platforms div::after {
+    content: attr(platform-hint);
+    display: none;
+}
+
+.content__events_item-platforms div:hover::after {
+    display: block;
+    position: absolute;
+    bottom: 110%;
+    left: 100%;
+    font-size: 12px;
+    padding: 3px;
+    color: #8489a0;
+    background-color: #12181f;
+    border: 1px solid #192129;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.content__events_item-winner {
+    display: flex;
+    color: #a1a4b7;
+    font-size: 12px;
+    align-items: center;
+}
+
+.content__events_item-winner img {
+    height: 15px;
+    filter: drop-shadow(0 0 9px #0083fd59);
+    margin-left: 6px;
+}
+
+.content__events_item-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content__events_item-status.registration {
+    color: #00cbf6;
+}
+
+.content__events_item-status.registrated {
+    color: #84ca20;
+}
+
+.content__events_item-status.closed {
+    color: #ff0042;
+}
+
+.content__events_item-status,
+.content__events_item-date time:last-child,
+.content__events_item-reward span:last-child,
+.content__events_item-map span:last-child {
+    font-size: 12px;
+    color: #8489a0;
+}
+
+.content__events_item-date time,
+.content__events_item-reward span,
+.content__events_item-map span {
+    font-size: 16px;
+}
+
+.content__events_item-date,
+.content__events_item-reward,
+.content__events_item-map {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__events_item-players,
+.content__events_item-slots,
+.content__events_item-details {
+    display: flex;
+    align-items: center;
+}
+
+.content__events_item-date,
+.content__events_item-reward,
+.content__events_item-players,
+.content__events_item-slots {
+    flex-basis: 26%;
+}
+
+.content__events_item-map,
+.content__events_item-details {
+    flex-basis: 38%;
+}
+
+.content__events_item-players {
+    padding: 2px 0 2px 20px;
+    background: linear-gradient(to left, #1b5fbb, #1b5ebb00);
+    border-radius: 8px;
+}
+
+.content__events_item-players img {
+    margin-left: -20px;
+    filter: drop-shadow(0 0 9px #22232c);
+}
+
+.content__events_item-players img:first-child {
+    filter: none;
+}
+
+.content__events_item-players span {
+    margin: 0 10px;
+}
+
+.content__events_item-slots {
+    color: #15a1db;
+}
+
+.content__events_item-details {
+    background: linear-gradient(40deg, #29468d, #0149b6);
+    border: 1px solid #0099fa;
+    border-radius: 5px;
+    justify-content: center;
 }
 
 .content__results_match-wrapper:last-child,
@@ -423,6 +628,7 @@ h3 {
 .content__results_team-info {
     display: flex;
     flex-basis: 35%;
+    font-size: 16px;
 }
 
 .content__results_team-position {
@@ -445,7 +651,7 @@ h3 {
 }
 
 .content__results_team-statistics span {
-    font-size: 10pt;
+    font-size: 14px;
     color: #8489a0;
     width: calc(100% / 3);
     white-space: nowrap;
@@ -485,11 +691,11 @@ h3 {
 }
 
 .content__best_players-info p {
-    font-size: 10pt;
+    font-size: 14px;
 }
 
 .content__best_players-info span {
-    font-size: 6pt;
+    font-size: 9px;
     color: #8489a0;
 }
 
@@ -499,7 +705,7 @@ h3 {
 }
 
 .content__best_players-stat p {
-    font-size: 8pt;
+    font-size: 12px;
     color: #8489a0;
     margin-right: 12px;
     white-space: nowrap;
@@ -577,6 +783,6 @@ h3 {
 
 .footer p {
     text-align: center;
-    font-size: 10pt;
+    font-size: 12px;
 }
 
