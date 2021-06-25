@@ -140,6 +140,17 @@ a {
     margin-right: 10px;
 }
 
+.header__nav_menu-button.local {
+    width: 60px;
+    font-size: 14px;
+}
+
+.header__nav_menu-button.local img {
+    width: auto;
+    height: 11px;
+    margin-left: 5px;
+}
+
 .header__nav_menu-button:hover {
     cursor: pointer;
     background: linear-gradient(to bottom, #1f212c, #07090b);
@@ -152,25 +163,24 @@ a {
     cursor: pointer;
 }
 
-.header__nav_menu-button:last-of-type {
+.header__nav_menu-button.premium {
     position: relative;
 }
 
-.header__nav_menu-button:last-of-type:hover {
+.header__nav_menu-button.premium:hover {
     border: 1px solid #ff880044;
-    transition: all 0.3s ease-in-out 0.3s;
-    animation: button-gradient 1s linear forwards infinite;
+    animation: button-gradient 0.2s linear forwards infinite;
 }
 
-.header__nav_menu-button:last-of-type:hover img{
+.header__nav_menu-button.premium:hover img{
     filter: drop-shadow(0 0 10px black);
 }
 
-.header__nav_menu-button:last-of-type img {
+.header__nav_menu-button.premium img {
     position: absolute;
 }
 
-.header__nav_menu-button:last-of-type img:last-child {
+.header__nav_menu-button.premium img:last-child {
     opacity: 0;
     transition: all 0.5s ease;
     animation: star-gradient 1s linear infinite;
@@ -417,7 +427,6 @@ h3 {
 .content__slider {
     position: relative;
     height: 370px;
-
 }
 
 .content__slider_slide {
@@ -472,7 +481,8 @@ h3 {
     z-index: 2;
 }
 
-.content__slider_info {
+.content__slider_info,
+.content__header_info {
     padding: 55px 35px 35px;
     z-index: 3;
 }
@@ -503,13 +513,15 @@ div.content__slider_type-live {
     padding: 0 10px;
 }
 
-.content__slider_event-name {
+.content__slider_event-name,
+.content__header_event-name {
     font-size: 48px;
     font-weight: bold;
     z-index: 1;
 }
 
-.content__slider_event-date {
+.content__slider_event-date,
+.content__header_event-date {
     display: flex;
     margin-bottom: 30px;
     font-size: 24px;
@@ -929,3 +941,65 @@ div.content__slider_type-live {
     font-size: 12px;
 }
 
+.content__header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    height: auto;
+    width: -webkit-fill-available;
+    margin: -15px -20px 0;
+    overflow: hidden;
+}
+
+.content__header_info.groups {
+    padding: 35px;
+}
+
+.content__header_live {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    border-radius: 4px;
+    height: 26px;
+    margin-right: 10px;
+    font-size: 14px;
+    background: #ff0540;
+    border: 1px solid transparent;
+    padding: 0 10px;
+}
+
+.content__header_groups {
+    margin-top: 100px;
+}
+
+.content__header_groups-group {
+    padding: 3px 10px;
+    margin-right: 15px;
+    background: linear-gradient(40deg, #29468d80, #4285ec80);
+    border: 1px solid #0099fa;
+    border-radius: 10px;
+}
+
+.content__header_groups-group:hover {
+    background: linear-gradient(40deg, #29468d, #4285ec);
+}
+
+.content__header_groups-group.active {
+    background: linear-gradient(40deg, #0bbafb, #4285ec);
+}
+
+.content__results.groups,
+.content__best.groups {
+    padding-bottom: 10px;
+}
+
+.content__results_match-wrapper.groups,
+.content__best_players.groups {
+    padding: 10px 20px;
+}
+
+.content__results_teams.groups {
+    height: 190px;
+    margin-bottom: 10px;
+}
