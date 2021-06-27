@@ -426,7 +426,7 @@ a {
     background: linear-gradient(to bottom, #0f1419, #07090b 20%);
     border-radius: 10px;
     margin-right: 20px;
-    padding: 15px 10px 15px;
+    padding: 15px 10px 30px;
 }
 
 .sidebar h1 {
@@ -443,13 +443,13 @@ hr {
 
 .sidebar__info,
 .sidebar__news {
-    height: 162px;
+    height: 182px;
     margin: 10px 0;
     overflow-y: scroll;
 }
 
 .sidebar__news {
-    height: 324px;
+    height: 58%;
 }
 
 .sidebar__news_item,
@@ -460,6 +460,12 @@ hr {
     padding: 10px;
     border: 1px solid transparent;
     margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar__news_item:last-child,
+.sidebar__info_item:last-child {
+    margin-bottom: 0;
 }
 
 .sidebar__news_item:hover,
@@ -469,10 +475,20 @@ hr {
     border-radius: 10px;
 }
 
+.sidebar__news_item:hover .sidebar__news_info div,
+.sidebar__info_item:hover .sidebar__news_info div {
+    color: #fff;
+} 
+
 .sidebar__news_item img {
     max-width: 32px;
     max-height: 32px;
     border-radius: 5px;
+}
+
+.sidebar__news_item img.premium {
+    border: 1px solid #faa500;
+    box-shadow: 0 0 7px #ffc80999;
 }
 
 .sidebar__news_info {
@@ -494,8 +510,20 @@ hr {
     color: #8489a0;
 }
 
-.sidebar__news_info-teamname {
+.sidebar__news_info .premium {
     font-size: 12px;
+    font-weight: 400;
+    color: #ffc809;
+}
+
+.sidebar__news_info-teamname,
+.sidebar__news_info-name {
+    font-size: 12px;
+    font-weight: 400;
+    color: #006cff;
+}
+
+.sidebar__news_info .future-event {
     color: #006cff;
 }
 
@@ -530,6 +558,7 @@ h3 {
     border-radius: 10px;
     margin-left: 20px;
     padding: 15px 20px;
+    overflow: hidden;
 }
 
 .content__slider_slide,
@@ -739,6 +768,7 @@ div.content__slider_type-live {
 .content__events_item-cover {
     border-radius: 10px;
     width: 100%;
+    cursor: pointer;
 }
 
 .content__events_item-header,
@@ -1063,13 +1093,19 @@ span.kills {
     border: 2px solid transparent;
 }
 
-.content__best_players-data:hover img {
+img.content__best_players-premium {
     border: 2px solid #faa500;
 }
 
 .content__record_header {
     display: flex;
     justify-content: space-between;
+}
+
+.content__record_header a {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .arrow::after {
@@ -1099,13 +1135,31 @@ span.kills {
     height: 100%;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 0 10px 10px;
+}
+
+.content__record_pics-info,
+.content__record_pics-info.time {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.content__record_pics-info .name,
+.content__record_pics-info.time {
+    font-weight: 600;
+}
+
+.content__record_pics-info .name {
+    font-size: 14px;
 }
 
 .content__record_pics-gradient {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #0546ca, #0546ca00 50%);
+    background: linear-gradient(to top, #0547cae0, #0000004d 50%);
     border-radius: 10px;
 }
 
@@ -1114,6 +1168,8 @@ span.kills {
     width: 100%;
     align-self: center;
     text-align: center;
+    margin-left: -10px;
+    margin-top: 10px;
 }
 
 div.content__record_pics-play img {
@@ -1124,6 +1180,7 @@ div.content__record_pics-play img {
 .content__partners_pics a {
     display: flex;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .content__partners_pics a:last-child {
