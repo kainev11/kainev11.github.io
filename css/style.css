@@ -262,7 +262,7 @@ a {
     background-color: transparent;
 }
 
-.header__nav_profile-button:hover {
+.header__nav_profile-button-opened {
     margin: 0 6px 6px 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid #b8b8b8;
