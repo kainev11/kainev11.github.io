@@ -37,26 +37,50 @@
         <header class="header">
             <div class="header__nav">
                 <div class="header__nav_profile">
-                    <img src="./images/profile_pic.png" alt="profile picture">
-                    <div>
-                        <span class="header__nav_profile-nickname">
-                            nickname
-                        </span>
-                        <span class="header__nav_profile-premium">
-                            премиум
-                        </span>
+                    <div class="header__nav_profile-info">
+                        <img src="./images/profile_pic.png" alt="profile picture">
+                        <div>
+                            <span class="header__nav_profile-nickname">
+                                nickname
+                            </span>
+                            <span class="header__nav_profile-premium">
+                                премиум
+                            </span>
+                        </div>
+                        <button class="header__nav_profile-button"></button>
                     </div>
-                    <button class="header__nav_profile-button"></button>
+                    <div class="header__nav_profile-menu">
+                        <a href="#">Премиум</a>
+                        <a href="#">Выйти</a>
+                    </div>
                 </div>
                 <div class="header__nav_menu">
                     <div class="header__nav_menu-button">
                         <img src="./images/notification.png" alt="notification">
+                        <div class="header__nav_menu-notifications-counter">2</div>
+                    </div>
+                    <div class="header__nav_menu-notifications">
+                        <div class="header__nav_menu-notifications-wrapper">
+                            <div class="header__nav_menu-notification new">Ваш код для подключения к лобби –
+                                <span>bfgsj324dfsg3</span>
+                            </div>
+                            <hr>
+                            <div class="header__nav_menu-notification new">Вы зарегистрированы на участие в Скримы №12 /
+                                Alpha Team</div>
+                            <hr>
+                            <div class="header__nav_menu-notification">Вы приглашены к команде Aplha Team</div>
+                            <hr>
+                            <div class="header__nav_menu-notification">Вы зарегистрированы на участие в Скримы №12 /
+                                Alpha Team</div>
+                            <hr>
+                            <div class="header__nav_menu-notification">Вы приглашены к команде Aplha Team</div>
+                        </div>
                     </div>
                     <a href="#" class="header__nav_menu-button">
                         <img src="./images/home.png" alt="home">
                     </a>
                     <a href="#" class="header__nav_menu-button">
-                        <img src="./images/list.png" alt="list">
+                        <img src="./images/list.png" class="list" alt="list">
                     </a>
                     <a href="#" class="header__nav_menu-button">
                         <img src="./images/profile.png" alt="profile">
@@ -126,7 +150,9 @@
                 <hr>
                 <div class="sidebar__news">
                     <div class="sidebar__news_item">
-                        <img src="./images/profile_pic2.png" alt="profile picture">
+                        <div class="notification">
+                            <img src="./images/profile_pic2.png" alt="profile picture">
+                        </div>
                         <div class="sidebar__news_info">
                             <span class="sidebar__news_info-event">Kill Race Tournament</span>
                             <div><span class="future-event">предстоящее событие</span></div>
@@ -275,8 +301,9 @@
                     <div class="content__events_wrapper">
                         <div class="content__events_item">
                             <a href="#">
-                            <img src="./images/event_cover_1.png" class="content__events_item-cover" alt="event cover">
-                        </a>
+                                <img src="./images/event_cover_1.png" class="content__events_item-cover"
+                                    alt="event cover">
+                            </a>
                             <div class="content__events_item-desc">
                                 <div class="content__events_item-header">
                                     <div class="content__events_item-tags">
@@ -710,7 +737,8 @@
                                         </div>
                                     </div>
                                     <div class="content__best_players-data">
-                                        <img src="./images/profile_pic_best2.png" class="content__best_players-premium" alt="profile picture">
+                                        <img src="./images/profile_pic_best2.png" class="content__best_players-premium"
+                                            alt="profile picture">
                                         <div class="content__best_players-info">
                                             <p>Crix <span class="content__best_players-info-team">Alpha Team</span>
                                             </p>
@@ -864,7 +892,8 @@
                                     <img src="./images/play.png" alt="play">
                                 </div>
                                 <span class="content__record_pics-info time">1:24:11</span>
-                            </div></a>
+                            </div>
+                        </a>
                         <a href="#"><img src="./images/video_pic3.png" alt="record picture">
                             <div class="content__record_pics-gradient"></div>
                             <div class="content__record_pics-overlay">
@@ -877,7 +906,8 @@
                                     <img src="./images/play.png" alt="play">
                                 </div>
                                 <span class="content__record_pics-info time">1:24:11</span>
-                            </div></a>
+                            </div>
+                        </a>
                         <a href="#"><img src="./images/video_pic4.png" alt="record picture">
                             <div class="content__record_pics-gradient"></div>
                             <div class="content__record_pics-overlay">
@@ -890,7 +920,8 @@
                                     <img src="./images/play.png" alt="play">
                                 </div>
                                 <span class="content__record_pics-info time">1:24:11</span>
-                            </div></a>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="content__partners">
