@@ -1,7 +1,7 @@
-let profileBlock = document.querySelector(".header__nav_profile");
+let profileBlock = document.querySelector(".header__nav_profile-info");
 let button = profileBlock.querySelector(".header__nav_profile-button");
-let profileMenu = profileBlock.querySelector(".header__nav_profile-menu");
-button.addEventListener("click", function () {
+let profileMenu = document.querySelector(".header__nav_profile-menu");
+profileBlock.addEventListener("click", function () {
     button.classList.toggle("header__nav_profile-button-opened");
     profileMenu.classList.toggle("header__nav_profile-menu-opened");
 });
@@ -14,10 +14,9 @@ let notificationCounter = notificationButton.querySelector(".header__nav_menu-no
 notificationButton.addEventListener("click", function () {
     notificationButton.classList.toggle("header__nav_menu-button-active");
     notificationBlock.classList.toggle("header__nav_menu-notifications-opened");
-    notificationCounter.innerHTML = 0;
     if (!notificationButton.classList.contains("header__nav_menu-button-active")) {
         for (let i = 0; i < notificationCount; i++) 
             notifications[i].classList.remove("new");
     }
-    
+    notificationCounter.style.display = "none";
 });

@@ -238,6 +238,7 @@ a {
     background-color: #07090b;
     border-radius: 6px;
     border: 1px solid transparent;
+    cursor: pointer;
     z-index: 1;
 }
 
@@ -251,16 +252,19 @@ a {
     max-width: 30px;
     max-height: 30px;
     margin-left: 6px;
+    cursor: pointer;
 }
 
 .header__nav_profile-nickname {
     font-size: 14px;
     color: #b8b8b8;
+    cursor: pointer;
 }
 
 .header__nav_profile-premium {
     font-size: 10px;
     color: #ffc809;
+    cursor: pointer;
 }
 
 .header__nav_profile-button {
@@ -1410,4 +1414,128 @@ div.content__record_pics-play img {
 .content__results_teams.groups {
     height: 190px;
     margin-bottom: 10px;
+}
+
+.content__board {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: auto;
+grid-gap: 25px 35px;
+opacity: 0.99;
+}
+
+.content__board_info {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.content__board_team {
+display: flex;
+flex-direction: column;
+background: linear-gradient(to left, #07090b, #17202c);
+border-radius: 10px;
+border: 1px solid #2a2a2a;
+width: 100%;
+padding: 5px 15px 15px;
+}
+
+.content__board_team-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.content__board_slot {
+border-radius: 0 0 6px 6px;
+background: linear-gradient(to right, #29798d, #0174b6);
+width: 43%;
+padding: 5px;
+text-align: center;
+border: 1px solid #00d4fa;
+border-top: none;
+z-index: -1;
+}
+
+.content__board_team-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+}
+
+.content__board_team-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.team__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team__info_squad-list {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team__info_teammate, 
+.team__info_name {
+    line-height: initial;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.team__info_name {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.first-block__text{
+    margin-top: 10px;
+}
+
+.team__info_teammate {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 3px;
+}
+
+.team__info_teammate:last-child {
+    margin-bottom: 0;
+}
+
+.team__info_teammate img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.hint {
+    display: inline-block;
+    position: relative;
+}
+
+.hint:hover::after{
+    content: attr(data-hint);
+    position: absolute; 
+    z-index: 10001; 
+    font-size: 12px;
+    padding: 3px;
+    color: #8489a0;
+    background-color: #12181f;
+    border: 1px solid #192129;
+    border-radius: 6px;
+    white-space: normal;
+}
+
+.verification_icon img{
+    width: 11px;
+    margin-left: 5px;
 }
