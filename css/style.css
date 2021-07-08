@@ -1136,6 +1136,72 @@ div.content__slider_type-live {
     flex-basis: 60%;
 }
 
+.content__results_team-list {
+    display: flex;
+    background: linear-gradient(to right, #12181f, #0a0a0b);
+    margin: 0 30px 0 15px;
+    padding: 0 10px;
+    border: 1px solid #2a2a2a;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    align-items: center;
+}
+
+.content__results_team-list img {
+    width: 32px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.content__results_team-teammates {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content__results_team-teammate {
+    display: flex;
+    flex-direction: row;
+    padding: 3px 5px;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.content__results_team-teammate:hover {
+    background: linear-gradient(to right, #232e3c, #161619);
+}
+
+.content__results_team-teammate:first-child {
+    margin-top: 2px;
+    background: linear-gradient(to right, #232e3c, #161619);
+}
+
+.content__results_team-teammate:last-child {
+    margin-bottom: 2px;
+}
+
+.content__results_team-teammate-name {
+    flex-basis: 50%;
+}
+
+.content__results_team-teammate-damage  {
+    justify-content: end;
+}
+
+.content__results_team-teammate-kills,
+.content__results_team-teammate-damage {
+    flex-basis: 25%;
+}
+
+.content__results_team-teammate-name,
+.content__results_team-teammate-kills,
+.content__results_team-teammate-damage {
+    font-size: 10px;
+    font-weight: 500;
+    color: #8489a0;
+}
+
 .content__results_footer{
     align-items: center;
     margin-top: 25px;
