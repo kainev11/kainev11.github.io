@@ -1100,7 +1100,7 @@ div.content__slider_type-live {
 }
 
 .content__results_teams {
-    height: 139px;
+    height: 141px;
     overflow-y: scroll;
     margin-right: 6px;
 }
@@ -1111,6 +1111,7 @@ div.content__slider_type-live {
     padding: 6px 12px;
     margin-top: 20px;
     margin-right: 15px;
+    z-index: 2;
 }
 
 .content__results_team:first-child {
@@ -1138,31 +1139,40 @@ div.content__slider_type-live {
 
 .content__results_team-list {
     display: flex;
+    opacity: 0;
     background: linear-gradient(to right, #12181f, #0a0a0b);
     margin: 0 30px 0 15px;
     padding: 0 10px;
     border: 1px solid #2a2a2a;
     border-top: none;
     border-radius: 0 0 5px 5px;
+    height: 0;
     align-items: center;
+    z-index: 1;
 }
 
 .content__results_team-list img {
     width: 32px;
-    height: auto;
     object-fit: contain;
     border-radius: 10px;
+    height: 0;
+}
+
+.content__results_team-list img.opened {
+    height: auto;
 }
 
 .content__results_team-teammates {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 0;
 }
 
 .content__results_team-teammate {
     display: flex;
     flex-direction: row;
+    height: 0;
     padding: 3px 5px;
     margin: 0 5px;
     border-radius: 4px;
@@ -1174,7 +1184,6 @@ div.content__slider_type-live {
 
 .content__results_team-teammate:first-child {
     margin-top: 2px;
-    background: linear-gradient(to right, #232e3c, #161619);
 }
 
 .content__results_team-teammate:last-child {
@@ -1200,6 +1209,12 @@ div.content__slider_type-live {
     font-size: 10px;
     font-weight: 500;
     color: #8489a0;
+}
+
+.opened {
+    opacity: 1;
+    height: auto;
+    transition: opacity .3s, height .3s;
 }
 
 .content__results_footer{
@@ -1259,7 +1274,8 @@ span.kills {
 }
 
 .content__results_team:hover,
-.content__best_players-data:hover {
+.content__best_players-data:hover,
+.content__results_team-opened {
     background: linear-gradient(to left, #0a0a0b, #2a4791);
     border-radius: 9px;
     border: 1px solid #1d538c;
