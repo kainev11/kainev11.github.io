@@ -1266,11 +1266,15 @@ span.kills {
 .content__best_players-data {
     margin-top: 5px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .content__best_players-data {
+    display: flex;
+    flex-basis: 46%;
     padding: 6px;
     border: 1px solid transparent;
+    justify-content: start;
 }
 
 .content__results_team:hover,

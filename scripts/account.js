@@ -25,6 +25,7 @@ let teams = document.querySelectorAll(".content__results_team");
 let teamLists = document.querySelectorAll(".content__results_team-list");
 let currentTeam = -1;
 let closed = true;
+teams[0] = teams[1];
 for (let i = 0; i < teams.length; i++) {
     teams[i].addEventListener("click", function () {
         if (!closed) {
@@ -32,7 +33,7 @@ for (let i = 0; i < teams.length; i++) {
             teamLists[currentTeam].classList.remove("opened");
             teamLists[currentTeam].querySelector(".content__results_team-teammates").classList.remove("opened");
             let teammatesList = teamLists[currentTeam].querySelectorAll(".content__results_team-teammate");
-            for (let teammate of teammatesList) {
+            for (const teammate of teammatesList) {
                 teammate.classList.remove("opened");
             }
             teamLists[currentTeam].querySelector("img").classList.remove("opened");
@@ -45,12 +46,25 @@ for (let i = 0; i < teams.length; i++) {
             teamLists[i].classList.add("opened");
             teamLists[i].querySelector(".content__results_team-teammates").classList.add("opened");
             teammatesList = teamLists[i].querySelectorAll(".content__results_team-teammate");
-            for (let teammate of teammatesList) {
+            for (const teammate of teammatesList) {
                 teammate.classList.add("opened");
             }
             teamLists[i].querySelector("img").classList.add("opened");
             closed = !closed;
+            currentTeam = i;
         }
-        currentTeam = i;
     });
 }
+
+let bestPlayersList = document.querySelectorAll(".content__best_columns")[1];
+let bestPlayers = bestPlayersList.querySelectorAll(".content__best_players-data");
+let bestPlayersArray = Array.prototype.slice.call(bestPlayers, 0);
+let defaultSorted = true;
+if (defaultSorted)
+    bestPlayersArray.sort((a, b) => a.querySelector(".content__best_players-stat p:first-child").textContent.replace(/\D/g, "") - b.querySelector(".content__best_players-stat p:first-child").textContent.replace(/\D/g, ""));
+else
+    bestPlayersArray.sort((a, b) => a.querySelector(".content__best_players-stat p:last-child").textContent.replace(/\D/g, "") - b.querySelector(".content__best_players-stat p:last-child").textContent.replace(/\D/g, ""));
+while (bestPlayersList.firstChild)
+    bestPlayersList.removeChild(bestPlayersList.firstChild);
+for (const bestPlayer of bestPlayersArray)
+    bestPlayersList.appendChild(bestPlayer);
