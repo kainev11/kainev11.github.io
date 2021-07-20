@@ -21,6 +21,22 @@ notificationButton.addEventListener("click", function () {
     notificationCounter.style.display = "none";
 });
 
+let eventItems = document.querySelector(".content__events_wrapper");
+let listOpeningButton = eventItems.querySelector(".content__events_item-more");
+let eventItemList = eventItems.querySelectorAll(".content__events_item");
+let eventListOpened = false;
+listOpeningButton.addEventListener("click", function () {
+    if (!eventListOpened)
+        listOpeningButton.textContent = "Скрыть полный список событий";
+    else
+        listOpeningButton.textContent = "Показать полный список событий";
+    eventListOpened = !eventListOpened;
+    for (let i = 2; i < eventItemList.length; i++) {
+        eventItemList[i].classList.toggle("content__events_item-hidden");
+    }
+})
+
+
 let teams = document.querySelectorAll(".content__results_team");
 let teamLists = document.querySelectorAll(".content__results_team-list");
 let currentTeam = -1;
