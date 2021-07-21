@@ -319,7 +319,8 @@ a {
     display: none;
 }
 
-h3 {
+h3,
+.content__best_title {
     font-size: 18px;
     font-weight: 600;
 }
@@ -367,6 +368,13 @@ h3 {
     border: 1px solid #14161f;
     border-radius: 10px;
     background: radial-gradient(circle farthest-corner at top left, #0d223b, #07090b 25%);
+}
+
+.content__results_match-wrapper,
+.content__best_players,
+.content__best_teams {
+    background: radial-gradient(64.11% 64.11% at 97.55% 126.07%, #1B2530 0%, rgba(35, 35, 35, 0) 100%), #07090B;
+    border: 1px solid #292D3E;
 }
 
 .content__slider {
@@ -477,10 +485,6 @@ div.content__slider_type-live {
     margin-right: 10px;
 }
 
-.content__results_match-wrapper {
-    background: radial-gradient(circle farthest-corner at top left, #0d223b, #07090b 35%);
-}
-
 .content__events h3 {
     margin-top: 15px;
 }
@@ -488,7 +492,8 @@ div.content__slider_type-live {
 .content__events_item {
     padding: 0;
     margin: 0 0 15px 0;
-    background: radial-gradient(circle farthest-corner at bottom right, #0d223b, #07090b 25%);
+    background: radial-gradient(64.11% 64.11% at 97.55% 126.07%, #254C7A 0%, rgba(35, 35, 35, 0) 100%), #07090B;
+    border: 1px solid #292D3E;
     opacity: 1;
     height: auto;
     transition: opacity .3s, height .3s;
@@ -686,10 +691,13 @@ div.content__slider_type-live {
     justify-content: center;
 }
 
-.content__results_match-wrapper:last-child,
 .content__best_players:last-child,
 .content__best_teams:last-child {
     margin-right: 0;
+}
+
+.content__results_match-wrapper:last-child {
+    display: none;
 }
 
 .content__results_match,
@@ -720,8 +728,10 @@ div.content__slider_type-live {
     display: flex;
     border: 1px solid transparent;
     padding: 6px 12px;
-    margin-top: 20px;
+    margin-top: 10px;
     z-index: 2;
+    background: linear-gradient(90deg, #0E0E0E 0%, #191919 100%);
+    border-radius: 5px;
 }
 
 .content__results_team:first-child {
@@ -731,7 +741,7 @@ div.content__slider_type-live {
 .content__results_team-info {
     display: flex;
     flex-basis: 40%;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .content__results_team-position {
@@ -751,7 +761,7 @@ div.content__slider_type-live {
     display: flex;
     opacity: 0;
     background: linear-gradient(to right, #12181f, #0a0a0b);
-    margin: 0 30px 0 15px;
+    margin: 0 15px;
     padding: 0 10px;
     border: 1px solid #2a2a2a;
     border-top: none;
@@ -827,19 +837,20 @@ div.content__slider_type-live {
     transition: opacity .3s, height .3s;
 }
 
-.content__results_footer{
+.content__results_footer {
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-right: 0;
+    font-size: 14px;
 }
 
-.content__results_footer h2 {
-    font-size: 24px;
+.content__results_footer div {
+    font-size: 18px;
     font-weight: 600;
 }
 
 .content__results_team-statistics span {
-    font-size: 14px;
+    font-size: 12px;
     color: #8489a0;
     width: calc(100% / 3);
     white-space: nowrap;
@@ -862,9 +873,24 @@ span.kills {
 
 .content__results_footer-button {
     padding: 5px 7px;
-    background: linear-gradient(40deg, #29468d, #0149b6);
-    border: 1px solid #0099fa;
+    background: #0060FF;
     border-radius: 5px;
+}
+
+.content__results_footer-button span:last-child {
+    display: none;
+}
+
+.content__best h3 {
+    display: none;
+}
+
+.content__best_wrapper {
+    margin-top: 0;
+}
+
+.content__best_players {
+    margin-bottom: 15px;
 }
 
 .content__best_players h3,
@@ -874,9 +900,13 @@ span.kills {
 
 .content__best_columns,
 .content__best_players-data {
-    margin-top: 5px;
+    margin-top: 10px;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.content__best_columns {
+    margin-top: 5px;
 }
 
 .content__best_players-data {
@@ -885,22 +915,35 @@ span.kills {
     padding: 6px;
     border: 1px solid transparent;
     justify-content: start;
+    background: linear-gradient(90deg, #0E0E0E 0%, #191919 100%);
+    border-radius: 5px;
+    flex-direction: row;
 }
 
 .content__results_team:hover,
 .content__best_players-data:hover,
 .content__results_team-opened {
     background: linear-gradient(to left, #0a0a0b, #2a4791);
-    border-radius: 9px;
+    border-radius: 5px;
     border: 1px solid #1d538c;
 }
 
+.content__best_players-info {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 88%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .content__best_players-info p {
-    font-size: 14px;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 12px;
 }
 
 .content__best_players-info span {
-    font-size: 9px;
+    font-size: 12px;
     color: #8489a0;
 }
 
@@ -916,6 +959,14 @@ span.kills {
     white-space: nowrap;
 }
 
+.content__best_players-stat p:last-child {
+    margin-right: 0;
+}
+
+.content__best_players-stat p span {
+    display: none;
+}
+
 .content__best_players-data img {
     max-height: 30px;
     max-width: 30px;
@@ -928,123 +979,16 @@ img.content__best_players-premium {
     border: 2px solid #faa500;
 }
 
-.content__record_header {
-    display: flex;
-    justify-content: space-between;
+.content__record {
+    display: none;
 }
 
-.content__record_header a {
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.arrow::after {
-    content: url('../images/right-arrow.png');
-    margin-left: 5px;
-    display: inline-block;
-}
-
-.content__record_pics a {    
-    display: flex;
-    position: relative;
-    margin-right: 10px;
-}
-
-.content__record_pics a:last-child {
-    margin-right: 0;
-}
-
-.content__record_pics a img {
-    width: 100%;
-}
-
-.content__record_pics-overlay {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0 10px 10px;
-}
-
-.content__record_pics-info,
-.content__record_pics-info.time {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.content__record_pics-info .name,
-.content__record_pics-info.time {
-    font-weight: 600;
-}
-
-.content__record_pics-info .name {
-    font-size: 14px;
-}
-
-.content__record_pics-gradient {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #0547cae0, #0000004d 50%);
-    border-radius: 10px;
-}
-
-.content__record_pics-play {
-    position: absolute;
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    margin-left: -10px;
-    margin-top: 10px;
-}
-
-div.content__record_pics-play img {
-    width: 30px;
-    height: auto;
-}
-
-.content__partners_pics a {
-    display: flex;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.content__partners_pics a:last-child {
-    margin-right: 0;
-}
-
-.content__partners_pics img {    
-    max-height: 265px;
-    width: 100%;
-    border: 1px solid #14161f;
-}
-
-.content__partners_pics img,
-.content__record_pics img {
-    border-radius: 10px;
+.content__partners {
+    display: none;
 }
 
 .footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 85px;
-    background-color: #07090b;
-    border: 1px solid #14161f;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.footer p {
-    text-align: center;
-    font-size: 12px;
+    display: none;
 }
 
 .content__header {
