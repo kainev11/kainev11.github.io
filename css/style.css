@@ -885,6 +885,35 @@ span.kills {
     display: none;
 }
 
+.content__best_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content__best_filter {
+    position: relative;
+    font-size: 12px;
+}
+
+.content__best_filter-current {
+    font-weight: 600;
+}
+
+.content__best_filter-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: -100px;
+    background: #000000;
+    border: 1px solid #2A2A2A;
+    border-radius: 5px;
+}
+
+.content__best_filter-list span {
+    
+}
+
 .content__best_wrapper {
     margin-top: 0;
 }
