@@ -72,15 +72,46 @@ for (let i = 0; i < teams.length; i++) {
     });
 }
 
-let bestPlayersList = document.querySelectorAll('.content__best_columns')[1];
-let bestPlayers = bestPlayersList.querySelectorAll('.content__best_players-data');
-let bestPlayersArray = Array.prototype.slice.call(bestPlayers, 0);
-let defaultSorted = true;
-if (defaultSorted)
-    bestPlayersArray.sort((a, b) => a.querySelector('.content__best_players-stat p:first-child').textContent.replace(/\D/g, '') - b.querySelector('.content__best_players-stat p:first-child').textContent.replace(/\D/g, ''));
-else
-    bestPlayersArray.sort((a, b) => a.querySelector('.content__best_players-stat p:last-child').textContent.replace(/\D/g, '') - b.querySelector('.content__best_players-stat p:last-child').textContent.replace(/\D/g, ''));
-while (bestPlayersList.firstChild)
-    bestPlayersList.removeChild(bestPlayersList.firstChild);
-for (const bestPlayer of bestPlayersArray)
-    bestPlayersList.appendChild(bestPlayer);
+let bestPlayers = document.querySelector('.content__best_players');
+SortList(bestPlayers);
+
+let bestTeams = document.querySelector('.content__best_teams');
+SortList(bestTeams);
+
+function SortList(sortingList) {
+    let filter = sortingList.querySelector('.content__best_filter');
+    let currentFilter = filter.querySelector('.content__best_filter-current');
+    let filterList = filter.querySelector('.content__best_filter-list');
+    let filterDamage = filterList.querySelectorAll('span')[0];
+    let filterKills = filterList.querySelectorAll('span')[1];
+    let bestPlayersList = sortingList.querySelector('.content__best_columns');
+    let bestPlayers = bestPlayersList.querySelectorAll('.content__best_players-data');
+    let bestPlayersArray = Array.prototype.slice.call(bestPlayers, 0);
+    let defaultSorted = true;
+    currentFilter.addEventListener('click', function() {
+        filterList.classList.toggle('opened');
+        currentFilter.classList.toggle('content__best_filter-button-opened');
+        filterDamage.addEventListener('click', function() {
+            filterList.classList.remove('opened');
+            currentFilter.classList.remove('content__best_filter-button-opened');
+            Sort(defaultSorted, bestPlayersArray, bestPlayersList);
+        });
+        filterKills.addEventListener('click', function() {
+            filterList.classList.remove('opened');
+            currentFilter.classList.remove('content__best_filter-button-opened');
+            Sort(!defaultSorted, bestPlayersArray, bestPlayersList);
+        });
+    });
+}
+
+function Sort (defaultSorted, bestPlayersArray, bestPlayersList) {
+    console.log(defaultSorted);
+    if (defaultSorted)
+        bestPlayersArray.sort((a, b) => a.querySelector('.content__best_players-stat p:first-child').textContent.replace(/\D/g, '') - b.querySelector('.content__best_players-stat p:first-child').textContent.replace(/\D/g, ''));
+    else
+        bestPlayersArray.sort((a, b) => a.querySelector('.content__best_players-stat p:last-child').textContent.replace(/\D/g, '') - b.querySelector('.content__best_players-stat p:last-child').textContent.replace(/\D/g, ''));
+    while (bestPlayersList.firstChild)
+        bestPlayersList.removeChild(bestPlayersList.firstChild);
+    for (const bestPlayer of bestPlayersArray)
+        bestPlayersList.appendChild(bestPlayer);
+}

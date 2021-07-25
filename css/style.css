@@ -906,9 +906,12 @@ span.kills {
     content: url(../images/list-button.svg);
     display: inline-block;
     margin: 0 2px;
-    transform: rotate(-180deg);
     transition: transform .3s;
     transform-origin: 50% 60%;
+}
+
+.content__best_filter-button-opened.content__best_filter-current::after {
+    transform: rotate(-180deg);
 }
 
 .content__best_filter-list {
