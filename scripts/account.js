@@ -72,44 +72,44 @@ for (let i = 0; i < teams.length; i++) {
     });
 }
 
-let bestPlayers = document.querySelector('.content__best_players');
+const bestPlayers = document.querySelector('.content__best_players');
 SortList(bestPlayers);
 
-let bestTeams = document.querySelector('.content__best_teams');
+const bestTeams = document.querySelector('.content__best_teams');
 SortList(bestTeams);
 
 function SortList(sortingList) {
-    let filter = sortingList.querySelector('.content__best_filter');
-    let currentFilter = filter.querySelector('.content__best_filter-current');
-    let filterList = filter.querySelector('.content__best_filter-list');
-    let filterDamage = filterList.querySelectorAll('span')[0];
-    let filterKills = filterList.querySelectorAll('span')[1];
-    let bestPlayersList = sortingList.querySelector('.content__best_columns');
-    let bestPlayers = bestPlayersList.querySelectorAll('.content__best_players-data');
-    let bestPlayersArray = Array.prototype.slice.call(bestPlayers, 0);
+    const filter = sortingList.querySelector('.content__best_filter');
+    const currentFilter = filter.querySelector('.content__best_filter-current');
+    const filterList = filter.querySelector('.content__best_filter-list');
+    const filterDamage = filterList.querySelectorAll('span')[0];
+    const filterKills = filterList.querySelectorAll('span')[1];
+    const bestPlayersList = sortingList.querySelector('.content__best_columns');
+    const bestPlayers = bestPlayersList.querySelectorAll('.content__best_players-data');
+    const bestPlayersArray = Array.prototype.slice.call(bestPlayers, 0);
     let defaultSorted = true;
+    filterDamage.addEventListener('click', function() {
+        filterList.classList.remove('opened');
+        currentFilter.classList.remove('content__best_filter-button-opened');
+        currentFilter.innerHTML = 'По урону';
+        Sort(defaultSorted, bestPlayersArray, bestPlayersList);
+    });
+    filterKills.addEventListener('click', function() {
+        filterList.classList.remove('opened');
+        currentFilter.classList.remove('content__best_filter-button-opened');
+        currentFilter.innerHTML = 'По убийствам';
+        Sort(!defaultSorted, bestPlayersArray, bestPlayersList);
+    });
     currentFilter.addEventListener('click', function() {
         filterList.classList.toggle('opened');
         currentFilter.classList.toggle('content__best_filter-button-opened');
-        filterDamage.addEventListener('click', function() {
-            filterList.classList.remove('opened');
-            currentFilter.classList.remove('content__best_filter-button-opened');
-            Sort(defaultSorted, bestPlayersArray, bestPlayersList);
-        });
-        filterKills.addEventListener('click', function() {
-            filterList.classList.remove('opened');
-            currentFilter.classList.remove('content__best_filter-button-opened');
-            Sort(!defaultSorted, bestPlayersArray, bestPlayersList);
-        });
     });
 }
 
-function Sort (defaultSorted, bestPlayersArray, bestPlayersList) {
-    console.log(defaultSorted);
-    if (defaultSorted)
-        bestPlayersArray.sort((a, b) => a.querySelector('.content__best_players-stat p:first-child').textContent.replace(/\D/g, '') - b.querySelector('.content__best_players-stat p:first-child').textContent.replace(/\D/g, ''));
-    else
-        bestPlayersArray.sort((a, b) => a.querySelector('.content__best_players-stat p:last-child').textContent.replace(/\D/g, '') - b.querySelector('.content__best_players-stat p:last-child').textContent.replace(/\D/g, ''));
+function Sort(defaultSorted, bestPlayersArray, bestPlayersList) {
+    const selector = defaultSorted ? '.content__best_players-stat p:first-child' : '.content__best_players-stat p:last-child';
+    const getNumber = (el) => el.querySelector(selector).textContent.replace(/\D/g, '');
+    bestPlayersArray.sort((a, b) => getNumber(a) - getNumber(b));
     while (bestPlayersList.firstChild)
         bestPlayersList.removeChild(bestPlayersList.firstChild);
     for (const bestPlayer of bestPlayersArray)

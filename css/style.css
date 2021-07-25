@@ -836,6 +836,7 @@ div.content__slider_type-live {
     opacity: 1;
     height: auto;
     transition: opacity .3s, height .3s;
+    z-index: 1;
 }
 
 .content__results_footer {
@@ -927,6 +928,7 @@ span.kills {
     opacity: 0;
     height: 0;
     transition: opacity .3s, height .3s;
+    z-index: -1;
 }
 
 .content__best_filter-list span {
