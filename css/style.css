@@ -1060,6 +1060,7 @@ img.content__best_players-premium {
 
 .content__header_info.groups {
     padding: 35px;
+    z-index: 3;
 }
 
 .content__header_live {
