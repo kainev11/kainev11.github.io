@@ -24,7 +24,10 @@ notificationButton.addEventListener('click', function () {
 let eventItems = document.querySelector('.content__events_wrapper');
 let listOpeningButton = eventItems.querySelector('.content__events_item-more');
 let eventItemList = eventItems.querySelectorAll('.content__events_item');
-let eventListOpened = false;
+let eventListOpened = window.getComputedStyle(listOpeningButton).display === 'none';
+if (eventListOpened)
+    for (let i = 2; i < eventItemList.length; i++)
+        eventItemList[i].classList.remove('content__events_item-hidden');
 listOpeningButton.addEventListener('click', function () {
     if (!eventListOpened)
         listOpeningButton.textContent = 'Скрыть полный список событий';
