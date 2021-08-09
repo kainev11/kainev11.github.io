@@ -6,7 +6,7 @@ profileBlock.addEventListener('click', function () {
     profileMenu.classList.toggle('header__nav_profile-menu-opened');
 });
 
-let notificationButton = document.querySelector('.header__nav_menu-button');
+let notificationButton = document.querySelector('.header__nav_menu-button.notification');
 let notificationCount = document.querySelectorAll('.header__nav_menu-notification.new').length;
 let notifications = document.querySelectorAll('.header__nav_menu-notification');
 let notificationBlock = document.querySelector('.header__nav_menu-notifications');

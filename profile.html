@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <link rel='apple-touch-icon' sizes='180x180' href='https://apexesports.ru/static/favicon/apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='https://apexesports.ru/static/favicon/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='https://apexesports.ru/static/favicon/favicon-16x16.png'>
+    <link rel='manifest' href='https://apexesports.ru/static/favicon/site.webmanifest'>
+    <link rel='mask-icon' href='https://apexesports.ru/static/favicon/safari-pinned-tab.svg' color='#5bbad5'>
+    <meta name='msapplication-TileColor' content='#da532c'>
+    <meta name='theme-color' content='#ffffff'>
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta name='yandex-verification' content='df1b94b5b5988291' />
+    <link rel='stylesheet' href='https://apexesports.ru/static/css/animate.min.css'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <title>Apex Esports</title>
+</head>
+
+
+<body class='body'>
+    <div class='preloader__wrapper hidden'>
+        <div class='preloader'>
+            <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+                style='margin: auto; display: block;shape-rendering: auto;' width='23px' height='23px' viewBox='0 0 10'
+                preserveAspectRatio='xMidYMid'>
+                <circle cx='12' cy='12' fill='none' stroke='#00c0fa' stroke-width='2' r='10'
+                    stroke-dasharray='34.93 56.97787143782138'>
+                    <animatetransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='0.6s'
+                        values='0 12 12;360 12 12' keyTimes='0;1'></animatetransform>
+                </circle>
+            </svg>
+        </div>
+    </div>
+    <div class='grid-container'>
+        <header class='header'>
+            <div class='header__nav'>
+                <div class='header__nav_menu'>
+                    <a href='index.html' class='header__nav_menu-button'>
+                        <img src='./images/home.svg' alt='home'>
+                    </a>
+                    <a href='#' class='header__nav_menu-button'>
+                        <img src='./images/list.svg' class='list' alt='list'>
+                    </a>
+                    <a href='#' class='header__nav_menu-button profile'>
+                        <img src='./images/profile.svg' alt='profile'>
+                    </a>
+                    <a href='#' class='header__nav_menu-button'>
+                        <img src='./images/users.svg' alt='users'>
+                    </a>
+                    <div class='header__nav_menu-button notification'>
+                        <img src='./images/notification.svg' alt='notification'>
+                        <div class='header__nav_menu-notifications-counter'>2</div>
+                    </div>
+                    <div class='header__nav_menu-notifications'>
+                        <div class='header__nav_menu-notifications-wrapper'>
+                            <div class='header__nav_menu-notification new'>Ваш код для подключения к лобби –
+                                <span>bfgsj324dfsg3</span>
+                            </div>
+                            <hr>
+                            <div class='header__nav_menu-notification new'>Вы зарегистрированы на участие в Скримы №12 /
+                                Alpha Team</div>
+                            <hr>
+                            <div class='header__nav_menu-notification'>Вы приглашены к команде Aplha Team</div>
+                            <hr>
+                            <div class='header__nav_menu-notification'>Вы зарегистрированы на участие в Скримы №12 /
+                                Alpha Team</div>
+                            <hr>
+                            <div class='header__nav_menu-notification'>Вы приглашены к команде Aplha Team</div>
+                        </div>
+                    </div>
+                    <a href='#' class='header__nav_menu-button premium'>
+                        <img src='./images/premium.png' alt='premium'>
+                        <img src='./images/premium2.png' alt='premium'>
+                    </a>
+                    <a href='#' class='header__nav_menu-button local'>
+                        EN
+                        <img src='./images/sort.png' alt='sort'>
+                    </a>
+                    <a href='#' class='header__nav_menu-signin'>Авторизоваться</a>
+                    <div class='header__nav_profile'>
+                        <div class='header__nav_profile-info'>
+                            <img src='./images/profile_pic.png' alt='profile picture'>
+                            <div>
+                                <span class='header__nav_profile-nickname'>
+                                    nickname
+                                </span>
+                                <span class='header__nav_profile-premium'>
+                                    премиум
+                                </span>
+                            </div>
+                            <button class='header__nav_profile-button'></button>
+                        </div>
+                        <div class='header__nav_profile-menu'>
+                            <a href='#'>Премиум</a>
+                            <a href='#'>Выйти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='header__social'>
+                <img src='./images/discord.png' alt='Discord link'>
+                <img src='./images/twitter.png' alt='Twitter link'>
+                <img src='./images/twitch.png' alt='Twitch link'>
+                <img src='./images/vk.png' alt='Vk link'>
+                <img class='header__social_logo' src='./images/logo.svg' alt='Apex Esports logo'>
+            </div>
+        </header>
+        <main class='main'>
+            <aside class='sidebar'>
+                <h1>Боевые сводки</h1>
+                <div class='sidebar__info'>
+                    <div class='sidebar__info_item'>
+                        <img src='./images/profile_pic2-1.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №12</span>
+                            <div>участник / <span class='sidebar__news_info-teamname'>Alpha team</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__info_item'>
+                        <img src='./images/profile_pic2-2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №11</span>
+                            <div>участник / <span class='sidebar__news_info-teamname'>Beta team</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__info_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №10</span>
+                            <div>участник / <span class='sidebar__news_info-teamname'>Beta team</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__info_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div>предстоящее событие</div>
+                        </div>
+                    </div>
+                    <div class='sidebar__info_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div>предстоящее событие</div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class='sidebar__news'>
+                    <div class='sidebar__news_item'>
+                        <div class='notification'>
+                            <img src='./images/profile_pic2.png' alt='profile picture'>
+                        </div>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div><span class='future-event'>предстоящее событие</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2-3.png' class='premium' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Alexia</span>
+                            <div>приобрел <span class='premium'>премиум</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2-4.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №12</span>
+                            <div>победитель: <span class='sidebar__news_info-name'>Arthas</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2-5.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №11</span>
+                            <div>победитель: <span class='sidebar__news_info-name'>Arthas</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Love Voka Tournament</span>
+                            <div><span class='future-event'>предстоящее событие</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2-6.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Toxic Attack</span>
+                            <div>победитель: <span class='sidebar__news_info-name'>Arthas</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №10</span>
+                            <div>победитель: <span class='sidebar__news_info-name'>Arthas</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Скримы №9</span>
+                            <div>победитель: <span class='sidebar__news_info-name'>Arthas</span></div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div>предстоящее событие</div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div>предстоящее событие</div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div>предстоящее событие</div>
+                        </div>
+                    </div>
+                    <div class='sidebar__news_item'>
+                        <img src='./images/profile_pic2.png' alt='profile picture'>
+                        <div class='sidebar__news_info'>
+                            <span class='sidebar__news_info-event'>Kill Race Tournament</span>
+                            <div>предстоящее событие</div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class='sidebar__advice'>
+                    <div>Совет дня</div>
+                    <p>Вы можете состоять в нескольких командах</p>
+                </div>
+            </aside>
+            <article class='content profile'>
+                <div class='content__profile'>
+                    <h3>Профиль игрока</h3>
+                    <div class='content__profile_wrapper'>
+                        <div class='content__profile_main'>
+                            <img src='./images/profile_main_pic.png' alt='profile picture' class='content__profile_main-pic'>
+                            <div class='content__profile_main-links'>
+                                <a href='#' class='content__profile_main-link twitter'>
+                                    <img src='./images/twitter.svg' alt='twitter'>
+                                </a>
+                                <a href='#' class='content__profile_main-link twitch'>
+                                    <img src='./images/twitch.svg' alt='twitch'>
+                                </a>
+                                <a href='#' class='content__profile_main-link vk'>
+                                    <img src='./images/vk.svg' alt='vk'>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='content__profile_lables'>
+                            <div class='content__profile_label premium'>премиум</div>
+                            <div class='content__profile_label lvl'>lvl129</div>
+                            <img src='./images/xbox-logo.svg' alt='xbox-logo' class='content__profile_label platform'>
+                            <img src='./images/playstation-logo.svg' alt='playstation' class='content__platform_label platform'>
+                            <div class='content__platform_label platform'>PC</div>
+                        </div>
+                        <img src='./images/rank.png' alt='rank' class='content__profile_rank'>
+                    </div>
+                </div>
+                <div class='content__teams content-with-hide'>
+                    <h3>Участник команд</h3>
+                    <div class='content__teams_team'>
+                        <img src='./images/team-logo.png' alt='team logo' class='content__teams_team-logo'>
+                        <div class='content__teams_team-info'>
+                            <div class='content__teams_team-name'>Teamname</div>
+                            <div class='content__teams_team-status cap'>капитан</div>
+                        </div>
+                    </div>
+                    <div class='content__teams_team'>
+                        <img src='./images/team-logo.png' alt='team logo' class='content__teams_team-logo'>
+                        <div class='content__teams_team-info'>
+                            <div class='content__teams_team-name'>Teamname</div>
+                            <div class='content__teams_team-status member'>участник</div>
+                        </div>
+                    </div>
+                    <div class='content__teams_team'>
+                        <img src='./images/team-logo.png' alt='team logo' class='content__teams_team-logo'>
+                        <div class='content__teams_team-info'>
+                            <div class='content__teams_team-name'>Teamname</div>
+                            <div class='content__teams_team-status cap'>капитан</div>
+                        </div>
+                    </div>
+                    <div class='content__teams_team'>
+                        <img src='./images/team-logo.png' alt='team logo' class='content__teams_team-logo'>
+                        <div class='content__teams_team-info'>
+                            <div class='content__teams_team-name'>Teamname</div>
+                            <div class='content__teams_team-status cap'>капитан</div>
+                        </div>
+                    </div>
+                    <div class='content__more-button'>Показать все команды</div>
+                    <div class='content__teams_team content-with-hide_block content-with-hide_block-hidden'>
+                        <img src='./images/team-logo.png' alt='team logo' class='content__teams_team-logo'>
+                        <div class='content__teams_team-info'>
+                            <div class='content__teams_team-name'>Teamname</div>
+                            <div class='content__teams_team-status cap'>капитан</div>
+                        </div>
+                    </div>
+                    <div class='content__teams_team content-with-hide_block content-with-hide_block-hidden'>
+                        <img src='./images/team-logo.png' alt='team logo' class='content__teams_team-logo'>
+                        <div class='content__teams_team-info'>
+                            <div class='content__teams_team-name'>Teamname</div>
+                            <div class='content__teams_team-status cap'>капитан</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__statistics">
+                    <img src="./images/logo.svg" alt="apex" class="content__statistics_area">
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Урон</div>
+                        <div class="content__statistics_value">204431</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Убийства</div>
+                        <div class="content__statistics_value">53</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Чемпион</div>
+                        <div class="content__statistics_value">204431</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Скримов</div>
+                        <div class="content__statistics_value">53</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Турниров сыграно</div>
+                        <div class="content__statistics_value">2</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Всего матчей</div>
+                        <div class="content__statistics_value">41</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Топ - 3</div>
+                        <div class="content__statistics_value">2</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Топ - 16 и ниже</div>
+                        <div class="content__statistics_value">51</div>
+                    </div>
+                    <img src="./images/apex.svg" alt="apex" class="content__statistics_area">
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Урон</div>
+                        <div class="content__statistics_value">204431</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Убийства</div>
+                        <div class="content__statistics_value">53</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Чемпион</div>
+                        <div class="content__statistics_value">204431</div>
+                    </div>
+                    <div class="content__statistics_info">
+                        <div class="content__statistics_parameter">Скримов</div>
+                        <div class="content__statistics_value">53</div>
+                    </div>
+                </div>
+                <div class="content__buttons">
+                    <div class="content__buttons_statistics">Статистика</div>
+                    <div class="content__buttons_history inactive">История игр</div>
+                    <div class="content__buttons_create">Создать команду</div>
+                </div>
+                <footer class="footer">
+                    <p>2020 © All rights reserved. Apex Legends is a registered trademark of EA.<br>
+                        Tournaments is not affiliated with or sponsored by Electronic Arts Inc.<br>Сontact us on
+                        info@apexesports.ru</p>
+                </footer>
+            </article>
+        </main>
+    </div>
+    <script src='./scripts/account.js'></script>
+    <script src='./scripts/fullListVisibility.js'></script>
+</body>
+
+</html>

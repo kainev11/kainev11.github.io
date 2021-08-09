@@ -1616,6 +1616,59 @@ img.content__best_players-premium {
     transition: opacity 0s, height 0s;
 }
 
+/* profile page */
+
+.content.profile {
+    background: url('../images/background.png') no-repeat;
+    background-size: contain;
+}
+
+.content__profile_wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.content__profile_main {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.content__profile_main-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.content__profile_main-links {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    justify-content: space-between;
+    border-radius: 2px;
+}
+
+.content__profile_main-link {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__profile_main-link.twitter {
+    background: #215ACEBF;
+}
+
+.content__profile_main-link.twitch {
+    background: #5E21CEBF;
+}
+
+.content__profile_main-link.vk {
+    background: #213ACE;
+}
+
 @media (min-width: 600px) {
     .grid-container {
         display: grid;
@@ -1769,7 +1822,7 @@ img.content__best_players-premium {
         top: 110%;
         width: 245px;
         height: 0;
-        left: -15%;
+        left: 5%;
         padding: 15px 7px;
         opacity: 0;
         transition: opacity .3s, max-height .3s;
