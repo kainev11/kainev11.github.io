@@ -1,152 +1,152 @@
 @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 400;
-    src: local("TT Norms Pro Regular"),
-      url("../fonts/TT Norms Pro Regular.woff") format("woff");
+    src: local('TT Norms Pro Regular'),
+      url('../fonts/TT Norms Pro Regular.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 400;
-    src: local("TT Norms Pro Italic"),
-      url("../fonts/TT Norms Pro Italic.woff") format("woff");
+    src: local('TT Norms Pro Italic'),
+      url('../fonts/TT Norms Pro Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 100;
-    src: local("TT Norms Pro Thin"),
-      url("../fonts/TT Norms Pro Thin.woff") format("woff");
+    src: local('TT Norms Pro Thin'),
+      url('../fonts/TT Norms Pro Thin.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro Thin";
+    font-family: 'TT Norms Pro Thin';
     font-style: italic;
     font-weight: 100;
-    src: local("TT Norms Pro Thin Italic"),
-      url("../fonts/TT Norms Pro Thin Italic.woff") format("woff");
+    src: local('TT Norms Pro Thin Italic'),
+      url('../fonts/TT Norms Pro Thin Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 200;
-    src: local("TT Norms Pro ExtraLight"),
-      url("../fonts/TT Norms Pro ExtraLight.woff") format("woff");
+    src: local('TT Norms Pro ExtraLight'),
+      url('../fonts/TT Norms Pro ExtraLight.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 200;
-    src: local("TT Norms Pro ExtraLight Italic"),
-      url("../fonts/TT Norms Pro ExtraLight Italic.woff") format("woff");
+    src: local('TT Norms Pro ExtraLight Italic'),
+      url('../fonts/TT Norms Pro ExtraLight Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 300;
-    src: local("TT Norms Pro Light"),
-      url("TT Norms Pro Light.woff") format("woff");
+    src: local('TT Norms Pro Light'),
+      url('TT Norms Pro Light.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 300;
-    src: local("TT Norms Pro Light Italic"),
-      url("TT Norms Pro Light Italic.woff") format("woff");
+    src: local('TT Norms Pro Light Italic'),
+      url('TT Norms Pro Light Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 500;
-    src: local("TT Norms Pro Medium"),
-      url("../fonts/TT Norms Pro Medium.woff") format("woff");
+    src: local('TT Norms Pro Medium'),
+      url('../fonts/TT Norms Pro Medium.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 500;
-    src: local("TT Norms Pro Medium Italic"),
-      url("../fonts/TT Norms Pro Medium Italic.woff") format("woff");
+    src: local('TT Norms Pro Medium Italic'),
+      url('../fonts/TT Norms Pro Medium Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 600;
-    src: local("TT Norms Pro Bold"),
-      url("../fonts/TT Norms Pro Bold.woff") format("woff");
+    src: local('TT Norms Pro Bold'),
+      url('../fonts/TT Norms Pro Bold.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 600;
-    src: local("TT Norms Pro Bold Italic"),
-      url("../fonts/TT Norms Pro Bold Italic.woff") format("woff");
+    src: local('TT Norms Pro Bold Italic'),
+      url('../fonts/TT Norms Pro Bold Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 700;
-    src: local("TT Norms Pro ExtraBold"),
-      url("../fonts/TT Norms Pro ExtraBold.woff") format("woff");
+    src: local('TT Norms Pro ExtraBold'),
+      url('../fonts/TT Norms Pro ExtraBold.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 700;
-    src: local("TT Norms Pro ExtraBold Italic"),
-      url("../fonts/TT Norms Pro ExtraBold Italic.woff") format("woff");
+    src: local('TT Norms Pro ExtraBold Italic'),
+      url('../fonts/TT Norms Pro ExtraBold Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 800;
-    src: local("TT Norms Pro Black"),
-      url("../fonts/TT Norms Pro Black.woff") format("woff");
+    src: local('TT Norms Pro Black'),
+      url('../fonts/TT Norms Pro Black.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 800;
-    src: local("TT Norms Pro Black Italic"),
-      url("../fonts/TT Norms Pro Black Italic.woff") format("woff");
+    src: local('TT Norms Pro Black Italic'),
+      url('../fonts/TT Norms Pro Black Italic.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: normal;
     font-weight: 900;
-    src: local("TT Norms Pro ExtraBlack"),
-      url("../fonts/TT Norms Pro ExtraBlack.woff") format("woff");
+    src: local('TT Norms Pro ExtraBlack'),
+      url('../fonts/TT Norms Pro ExtraBlack.woff') format('woff');
   }
   
   @font-face {
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-style: italic;
     font-weight: 900;
-    src: local("TT Norms Pro ExtraBlack Italic"),
-      url("../fonts/TT Norms Pro ExtraBlack Italic.woff") format("woff");
+    src: local('TT Norms Pro ExtraBlack Italic'),
+      url('../fonts/TT Norms Pro ExtraBlack Italic.woff') format('woff');
   }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "TT Norms Pro";
+    font-family: 'TT Norms Pro';
     font-weight: 400;
     color: white;
     cursor: default;
@@ -1174,9 +1174,8 @@ img.content__best_players-premium {
 
 .team__info_squad-list {
     display: flex;
-    height: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -1391,6 +1390,11 @@ img.content__best_players-premium {
     font-weight: 400;
 }
 
+.content__info_description-full {
+    height: auto;
+    transition: height 0.3s;
+}
+
 .content__info_description-shadow {
     position: absolute;
     width: 100%;
@@ -1434,18 +1438,190 @@ img.content__best_players-premium {
     transform: translate(-50%,-50%);
 }
 
-.content__info_record-live::after {
+.content__info_rewards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+
+.content__info_reward {
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.content__info_reward::after {
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 40%;
+    bottom: 1px;
+    right: 1px;
+    background: #14B0BA;
+    border-radius: 57px;
+    z-index: -1;
+}
+
+.content__info_reward.reward-first::after {
+    background: #FFE600;
+}
+
+.content__info_reward.reward-second::after {
+    background: #DCF7FF;
+}
+
+.content__info_reward.reward-third::after {
+    background: #FF9E0D;
+}
+
+.content__info_reward-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(78, 78, 78, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.content__info_reward-icon,
+.content__info_reward-gift,
+.content__info_reward-status {
+    opacity: 0.99;
+}
+
+.content__info_reward-icon {
+    position: relative;
+    font-size: 10px;
+    width: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content__info_reward-icon::after {
     content: url('../images/reward.svg');
     position: absolute;
-    top: 50%;
+    left: 0;
+}
+
+.content__info_reward.reward-damage .content__info_reward-icon,
+.content__info_reward.reward-heal .content__info_reward-icon,
+.content__info_reward.reward-kills .content__info_reward-icon {
+    color: transparent;
+}
+
+.content__info_reward.reward-damage .content__info_reward-icon::after {
+    content: url('../images/reward_damage.svg');
+    top: -5px;
+}
+
+.content__info_reward.reward-heal .content__info_reward-icon::after {
+    content: url('../images/reward_heal.svg');
+    top: -5px;
+}
+
+.content__info_reward.reward-kills .content__info_reward-icon::after {
+    content: url('../images/reward_kills.svg');
+    top: -5px;
+}
+
+.content__info_reward-gift {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content__info_reward-status {
+    font-size: 12px;
+}
+
+.content__schedule {
+    margin-top: 10px;
+}
+
+.content__schedule_list {
+    display: none;
+}
+
+.content__schedule_board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 15px;
+}
+
+.content__schedule_slot {
+    position: relative;
+    padding: 5px 10px;
+    background: #0047FF;
+    border-radius: 10px;
+}
+
+.content__schedule_slot-group {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.content__schedule_slot-date {
+    font-size: 14px;
+}
+
+.content__schedule_slot-status {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 5px;
+    background: #BA1456;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.content__schedule_slot-status::after {
+    content: url('../images/cyrcle_arrow.svg');
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+}
+
+.content__more-button {
+    grid-column: 1 / span 2;
+    color: #0788FF;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content__board_team.tournament {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.content__board h3 {
+    grid-column: 1 / span 2;
+    margin-top: 15px;
+}
+
+.content-with-hide_block {
+    height: auto;
+    opacity: 1;
+    transition: opacity .3s, height .3s;
+}
+
+.content-with-hide_block-hidden {
+    display: none;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0s, height 0s;
 }
 
 @media (min-width: 600px) {
     .grid-container {
         display: grid;
         grid-template-rows: min-content 1fr;
-        grid-template-areas: "header"
-                              "main";
+        grid-template-areas: 'header'
+                              'main';
         padding: 20px 30px;
     }
     
@@ -1645,7 +1821,7 @@ img.content__best_players-premium {
     }
     
     .header__nav_menu-notification::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 45%;
         left: -10px;
@@ -1675,7 +1851,7 @@ img.content__best_players-premium {
     }
     
     .header__nav_menu-button.premium:hover::before {
-        content: "";
+        content: '';
         display: block;
         height: 54px;
         min-width: 54px;
@@ -1753,7 +1929,7 @@ img.content__best_players-premium {
         display: grid;
         grid-area: main;
         grid-template-columns: 3fr 16fr;
-        grid-template-areas: "sidebar content";
+        grid-template-areas: 'sidebar content';
         margin: 10px 0;
     }
     
@@ -1831,7 +2007,7 @@ img.content__best_players-premium {
     }
     
     .sidebar__news_item .notification::after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         border-radius: 50%;

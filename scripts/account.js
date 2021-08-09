@@ -39,7 +39,6 @@ listOpeningButton.addEventListener('click', function () {
     }
 })
 
-
 let teams = document.querySelectorAll('.content__results_team');
 let teamLists = document.querySelectorAll('.content__results_team-list');
 let currentTeam = -1;
